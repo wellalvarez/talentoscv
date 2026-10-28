@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Talento | República Dominicana</title>
+    <!-- Fuente moderna de Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar Elegante -->
+    <nav class="navbar glass-effect">
+        <div class="logo">
+            <h2>🇩🇴 Talentos GDR</h2>
+        </div>
+        <ul class="menu">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#galeria">Perfiles</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <h1 class="fade-in">Descubre talento extraordinario</h1>
+        <p>Explora perfiles profesionales con un diseño exclusivo.</p>
+    </section>
+
+    <!-- Galería de Tarjetas (Aquí se inyectan los perfiles vía JS) -->
+    <main id="galeria" class="container">
+        <div id="grid-perfiles" class="grid-container"></div>
+    </main>
+
+    <!-- Modal / Ventana Emergente -->
+    <div id="perfil-modal" class="modal-overlay">
+        <div class="close-x-circle" onclick="cerrarModal()">
+            <span>&times;</span>
+        </div>
+        
+        <div class="modal-content">
+            <!-- Aquí se carga la imagen de perfil -->
+            <img id="foto-perfil" src="" alt="Foto de perfil">
+            
+            <div class="info-perfil">
+                <h2 id="nombre-perfil"></h2>
+                <p id="titulo-perfil"></p>
+                
+                <div class="redes-sociales">
+                    <!-- Iconos placeholder -->
+                    <span class="icon facebook">F</span>
+                    <span class="icon instagram">IG</span>
+                    <span class="icon linkedin">LN</span>
+                </div>
+
+                <div class="seccion-contacto">
+                    <p><strong>Email:</strong> <span id="email-perfil"></span></p>
+                    <p><strong>Teléfono:</strong> <span id="telefono-perfil"></span></p>
+                    <p><strong>Nacionalidad:</strong> <span id="nacionalidad-perfil"></span></p>
+                </div>
+
+                <div class="seccion-ubicacion">
+                    <h3>Ubicación</h3>
+                    <p id="direccion-perfil"></p>
+                    <p><strong>ID / Pasaporte:</strong> <span id="id-perfil"></span></p>
+                </div>
+
+                <div class="seccion-pdf-container">
+                    <h3>Descargar o Ver CV en PDF</h3>
+                    <button onclick="visualizarPDF()" class="btn-pdf">📂 Abrir Previsualización del PDF</button>
+                    <!-- El iframe de la previsualización -->
+                    <iframe id="pdf-viewer" style="display:none;" title="PDF Viewer"></iframe>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts para la lógica -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.5/axios.min.js"></script> 
+    <script src="main.js"></script>
+
+</body>
+</html>
