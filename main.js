@@ -15,7 +15,7 @@ const perfiles = [
         id: 2,
         nombre: "Carlos Méndez",
         puesto: "Desarrollador Full Stack",
-        foto: "https://images.unsplash.com/photo-1506794778202-c28777fbd99c?w=500&auto=format&fit=crop&q=60",
+        foto: "https://github.com/wellalvarez/talentoscv/blob/main/img/foto-carlos.jpg",
         email: "carlos.dev@example.com",
         telefono: "+1 829-555-0987",
         ubicacion: "Samaná, Cabo Rojo",
