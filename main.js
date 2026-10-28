@@ -4,12 +4,12 @@ const perfiles = [
         id: 1,
         nombre: "Ana Rodríguez",
         puesto: "Diseñadora UX/UI",
-        foto: "https://images.unsplash.com/photo-1494790108375-be6c69b8da42?w=500&auto=format&fit=crop&q=60", // Ejemplo de imagen real
+        foto: "img/Luis.jpg", // Ejemplo de imagen real
         email: "ana.rod@example.com",
         telefono: "+1 809-555-0123",
         ubicacion: "Santo Domingo, Esmeralda Heights",
         pasaporte: "PD-555-123", // NIE/Pasaporte Dominicano
-        url_pdf: ""img/Ana Rodriguez.pdf// Aquí pondrás la ruta de tu PDF real más adelante
+        url_pdf: "img/Ana Rodriguez.pdf"// Aquí pondrás la ruta de tu PDF real más adelante
     },
     {
         id: 2,
