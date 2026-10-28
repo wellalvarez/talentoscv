@@ -1,0 +1,212 @@
+/* Variables de Diseño */
+:root {
+    --bg-color: #0f172a; /* Azul noche muy oscuro */
+    --card-bg: #1e293b;   /* Gris azulado */
+    --accent-gold: #d4af37; /* Dorado elegante */
+    --text-light: #f1f5f9;
+    --text-dim: #94a3b8;
+    --font-main: 'Poppins', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-light);
+    font-family: var(--font-main);
+}
+
+/* Navbar Glassmorphism */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    position: fixed;
+    width: 90%;
+    left: 5%;
+    top: 1rem;
+    z-index: 100;
+}
+
+/* Hero */
+.hero {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: radial-gradient(circle at center, #1e293b 0%, #0f172a 100%);
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    background: linear-gradient(to right, #d4af37, #fff);
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-bottom: 0.5rem;
+}
+
+/* Grid de Perfiles */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 1rem;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+/* Tarjeta de Perfil */
+.card {
+    background: var(--card-bg);
+    border-radius: 20px;
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(212, 175, 55, 0.15); /* Sombra dorada sutil */
+    border-color: var(--accent-gold);
+}
+
+.card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 3px solid var(--accent-gold);
+}
+
+.card h3 {
+    font-weight: 600;
+    margin: 0.5rem 0;
+}
+
+.card p {
+    color: var(--text-dim);
+    font-size: 0.9rem;
+}
+
+/* MODAL / POPUP STYLING */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    display: none; /* Oculto por defecto */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.modal-content {
+    background: #fff;
+    width: 90%;
+    max-width: 800px;
+    height: auto; /* Auto ajustable */
+    min-height: 50vh;
+    position: relative;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Estilos específicos del contenido dentro del modal */
+.info-perfil {
+    padding: 2rem;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    border-radius: 15px;
+    position: relative;
+}
+
+#foto-perfil {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 2rem;
+    border: 4px solid var(--accent-gold);
+    background-color: #eee; /* Placeholder color */
+}
+
+.info-perfil h2 {
+    font-size: 2.5rem;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+}
+
+.seccion-ubicacion, .seccion-pdf-container {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+    color: #555;
+}
+
+.btn-pdf {
+    background-color: var(--bg-color);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    font-weight: bold;
+    margin-top: 1rem;
+    display: block;
+    width: fit-content;
+}
+
+/* CIRCULO X PARA CERRAR */
+.close-x-circle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(20, 184, 166, 0.3); /* Verde agua semitransparente */
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    z-index: 1001; /* Encima del contenido */
+}
+
+.close-x-circle:hover {
+    background-color: rgba(20, 184, 166, 0.6);
+    transform: rotate(90deg);
+}
+
+#pdf-viewer iframe {
+    width: 100%;
+    height: 70vh;
+    border: none;
+    background-color: #f0f0f0;
+}
