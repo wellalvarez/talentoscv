@@ -9,7 +9,7 @@ const perfiles = [
         telefono: "+1 809-555-0123",
         ubicacion: "Santo Domingo, Esmeralda Heights",
         pasaporte: "PD-555-123", // NIE/Pasaporte Dominicano
-        url_pdf: "" // Aquí pondrás la ruta de tu PDF real más adelante
+        url_pdf: ""img/Ana Rodriguez.pdf// Aquí pondrás la ruta de tu PDF real más adelante
     },
     {
         id: 2,
